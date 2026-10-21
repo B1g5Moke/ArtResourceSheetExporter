@@ -2,14 +2,11 @@
 
 Unity Editor 单脚本工具：扫描 Texture、特效 Prefab、Spine `SkeletonDataAsset`、FBX/模型动画和 Animator Controller，整理名称、分类和参考图，并导出 `.xlsx` 美术资源表。
 
-当前公开版版本号：`v0.4.1`。这是与内部版**独立维护**的发布目录；不要把上级目录中的测试截图、日志、公司项目资源或个人配置一并上传。
-
-想了解扫描、分类、预览和 Excel 生成的实现，可阅读[实现原理笔记](./实现原理笔记.md)。
 
 ## 安装
 
 1. 只复制 [`ArtResourceSheetExporter.cs`](./ArtResourceSheetExporter.cs) 到项目的 `Assets/Editor` 目录。
-2. 等待编译完成，从 `TA工具 → 美术资源表导出工具 v0.4.1` 或 `Tools → Art Resource Sheet Exporter v0.4.1` 打开。
+2. 等待编译完成，从 `Tools → 美术资源表导出工具 v0.4.1` 或 `Tools → Art Resource Sheet Exporter v0.4.1` 打开。
 3. 若项目安装了 Spine-Unity，工具会自动识别 `SkeletonDataAsset` 并生成 Spine 预览；若没有安装，Spine 功能自动停用，其他资源功能仍可使用。工具不附带 Spine 插件或项目美术资源。
 
 Spine 资源的导出版本须与项目中的 Spine-Unity 版本匹配。本脚本在不引用 Spine 程序集的编译环境，以及使用 Spine-Unity 4.1、3.8 的本地项目中通过编译。反射版的实际 Spine 预览图仍应在目标 Unity 项目中逐项检查；目前不宣称所有 Unity、渲染管线和 Spine 组合都已完成运行时验证。
